@@ -13,11 +13,11 @@
   "author": "Hindsight Software Ltd",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^1.1.0",
-    "minimist": "^1.1.1",
+    "chalk": "^2.4.2",
+    "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
-    "request": "^2.58.0",
-    "underscore": "^1.8.3",
+    "request": "^2.88.0",
+    "lodash": "^4.17.15",
     "unzipper": "^0.10.5"
   },
   "bin": {
