@@ -1,8 +1,9 @@
 {
   "name": "@essent/behavepro",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Behave Pro JS exporter",
   "main": "index.js",
+  "repository": "https://github.com/Essent/behave-pro-node",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
