@@ -5,8 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/Essent/behave-pro-node",
   "scripts": {
-    "release": "np",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "np"
   },
   "engines": {
     "node": ">=10.13.0",
