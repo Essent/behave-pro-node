@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 "use strict";
-var BehavePro = require("../lib/behavepro");
-var args = require("minimist")(process.argv.slice(2));
-var packageJson = require("../package.json");
-var chalk = require("chalk");
+const BehavePro = require("../lib/behavepro");
+const args = require("minimist")(process.argv.slice(2));
+const packageJson = require("../package.json");
+const chalk = require("chalk");
 
 if (args.help) {
   console.log(
@@ -22,18 +22,25 @@ if (args.help) {
   return;
 }
 
-var settings = {
+const settings = {
   host: args.host || "https://behave.pro",
   id: args.key || args.project || args.id,
   userId: args.user || args.userId,
   apiKey: args.api || args.apiKey || args.password,
   output: args.output || args.dir || args.directory || "features",
   manual: args.manual || args.m || false,
-  config: args.config || "config.json"
+  config: args.config || "config.json",
+};
+
+const errorHandler = (err) => {
+  console.error("There was an error:", err);
+  process.exit(1); //mandatory (as per the Node.js docs)
 };
 
 if (settings.id && settings.userId && settings.apiKey) {
-  BehavePro.fetchFeatures(settings);
+  BehavePro.fetchFeatures(settings).catch(errorHandler);
 } else {
-  BehavePro.fetchFeaturesFromConfig(settings);
+  BehavePro.fetchFeaturesFromConfig(settings).catch(errorHandler);
 }
+
+process.on("uncaughtException", errorHandler);

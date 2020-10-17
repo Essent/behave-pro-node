@@ -1,7 +1,7 @@
 # Behave Pro NodeJS Client
 
 ```
-$ npm install behavepro -g
+$ npm install @essent/behavepro -g
 ```
 
 See [API Key setup](introduction.html) to retrieve the required credentials.
@@ -86,9 +86,9 @@ BehavePro({
   "id": 10000,
   "userId": "amlyYToyNDM0ZG.....ZiNzQwNGI=",
   "apiKey": "44993b0481838e.....a246c723e8e"
-}, function() {
+}).then(() => {
   // done
-});
+})
 ```
 
 Available parameters:
