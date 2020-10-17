@@ -1,6 +1,6 @@
 {
   "name": "@essent/behavepro",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Behave Pro JS exporter",
   "main": "index.js",
   "repository": "https://github.com/Essent/behave-pro-node",
